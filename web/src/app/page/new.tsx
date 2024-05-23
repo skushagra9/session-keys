@@ -12,7 +12,7 @@ const domain = {
   name: 'filament',
   version: '1',
   chainId: 713715, // Replace with your chain ID
-  verifyingContract: '0xe380dff125525c85dfa1874e6a0091ae43e83d2f', // Replace with your contract address
+  verifyingContract: '0x0d8c4f0689d64fb4b64abfbf6ceada24b8f84934', // Replace with your contract address
 };
 
 const Order = [
@@ -27,8 +27,14 @@ const Order = [
 ];
 
 const messageToSign = {
-  message: 'Hello, World!',
-  value: ethers.utils.parseEther('1.0'), // Convert 1.0 ETH to wei
+  indexToken: '0x1163DA866dEdC35104DCfBb378408A874dD14e20',
+  sender: '0xDdF4DD7F9114ce484508f66A8A17fee63232E2A0', // Convert 1.0 ETH to wei
+  priceX18: 0,
+  amount: 0,
+  reduceOnly: 0,
+  isLong: 0,
+  collateral: 0,
+
 };
 
 
@@ -62,14 +68,11 @@ function App() {
       },
       primaryType: "Order",
       domain: domain,
-      message: {
-        signer: address,
-        message: messageToSign
-      }
+      message: messageToSign
     })
     var from = address;
     var params = [from, msgParams]
-    var method = 'eth_signTypedData_v3'
+    var method = 'eth_signTypedData_v4'
     web3.currentProvider.sendAsync({
       method,
       params,
