@@ -7,8 +7,8 @@ const orderMessage = {
 }
 // Function to handle the async operations
 async function register(account, ethereum, provider) {
-  const signer = ethers.Wallet.createRandom();
-  console.log(signer.getAddress())
+  // const signer = ethers.Wallet.createRandom();
+  // console.log(signer.getAddress())
   // First, we hash the register data
   const registerHash = ethers.utils._TypedDataEncoder.hash(
     {
