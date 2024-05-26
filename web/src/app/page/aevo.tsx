@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { promisify } from "util";
 
 const orderMessage = {
-  maker: '0x04aCcaBEa3BEd9BBc13748e70040A5A1430Ecd5f',
+  maker: '0x70e50dFB205596A635ce64Bc4da0b5Afd91F9C17',
 }
 // Function to handle the async operations
 async function register(account, ethereum, provider) {
@@ -12,7 +12,7 @@ async function register(account, ethereum, provider) {
   // First, we hash the register data
   const registerHash = ethers.utils._TypedDataEncoder.hash(
     {
-      name: "Aevo Mainnet",
+      name: "Filament",
       version: "1",
       chainId: 1,
     },
