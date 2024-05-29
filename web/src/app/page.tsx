@@ -1,5 +1,5 @@
 "use client"
-import App from './page/aevo';
+import App from './page/sign';
 const Home = () => {
   return (
     <div>
