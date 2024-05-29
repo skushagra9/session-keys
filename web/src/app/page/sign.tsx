@@ -7,10 +7,10 @@
       name: "Filament",
       version: "1",
       chainId: 713715,
-      verifyingContract: "0x3c13e0fd359c12a460fa11c72d8240b0423ddd1b",
+      verifyingContract: "0x42746d6a6e5b0ee1087db05ef30e46f899fa8273",
     },
     message: {
-      myValue: 123,
+      myMessage: "struct Order { address indexToken; address sender; uint256 price; uint256 amount, ammount of indextoken uint256 collateral}",
     },
     primaryType: "Message",
     types: {
@@ -20,7 +20,7 @@
         { name: "chainId", type: "uint256" },
         { name: "verifyingContract", type: "address" },
       ],
-      Message: [{ name: "myValue", type: "uint256" }],
+      Message: [{ name: "myMessage", type: "string" }],
     },
   });
 
@@ -40,3 +40,4 @@
     }
   );
 })();
+
